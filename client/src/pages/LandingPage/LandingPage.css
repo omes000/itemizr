@@ -320,9 +320,9 @@ a:link, a:visited {
     }
 
     ul {
-	    position: absolute;
-	    left: 250px;
-        width: 70%;
+	    xposition: absolute;
+	    xleft: 250px;
+        xwidth: 70%;
         top: 50px;
     }
 
