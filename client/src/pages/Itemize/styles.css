@@ -9,6 +9,10 @@
   text-decoration: none;
 }
 
+#user-items{
+  padding: 0 50px 0 50px;
+}
+
 #cameraBtn{
   border: solid;
   border-width: 1px;
@@ -337,7 +341,7 @@ i.icon-24-scan {
 }
 
 .card-img-top{
-  xwidth: 100%;
+  width: 50%;
  
 }
 

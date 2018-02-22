@@ -7,6 +7,8 @@ import { ModalType, ManualModal, ScannerModal } from '../../components/Modal';
 import ReactTable from 'react-table';
 //import "../../node_modules/react-table/react-table.css";
 
+//add price, add way to add up value, add quantity, remove the database form after submitting, add delete item, check for duplicate items, look at error checking for 0030100940340
+
 class Itemize extends Component {
 	constructor() {
 		super();
@@ -170,6 +172,9 @@ class Itemize extends Component {
 	}
 
 	handleItemSave = (item) => {
+		if (item.image === ""){
+			item.image = "http://placehold.it/100x100"
+		}
 		API.saveItem(this.state.user_id,{
 			productName: item.productName,
 			companyName: item.companyName,
@@ -524,13 +529,13 @@ class Itemize extends Component {
 						</div>
 					</div>
 
-					<div className = "row">
+					<div className = "row" id ="user-items">
 							<div className='md-12'>
 								{this.state.savedItems.length ? (
 									<div>
 										<div className="card-columns">
 											{this.state.savedItems.map(item => (
-												<div key = {item._id} className = 'card'>
+												<div key = {item._id} className = 'card text-center'>
 													<img className="card-img-top" src={item.image} alt="Card image cap"/>
 													<div className="card-block">
 														<h4 className="card-title">{item.productName}</h4>

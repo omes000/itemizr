@@ -9,7 +9,7 @@ const ItemSchema = new Schema({
 	category:{type: String},
 	desc:{type: String},
 	price_new:{type: String},
-	image:{type: String},
+	image:{type: String, default: "http://placehold.it/100x100"},
 	location:{type: String},
 	serialNumber:{type: String, default: "N/A"}, 
 	date: { type: Date, default: Date.now }
