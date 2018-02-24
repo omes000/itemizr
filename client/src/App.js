@@ -7,7 +7,6 @@ import Callback from './components/Auth/Callback/Callback';
 import Auth from './components/Auth/Auth';
 import history from './components/Auth/History';
 import LandingPage from "./pages/LandingPage";
-import Footer from "./components/Footer";
 
 const auth = new Auth();
 
@@ -29,7 +28,6 @@ const App = () =>
 			handleAuthentication(props);
 			return <Callback {...props} />
 		}}/>
-		<Footer />
  	</div>
 
 </Router>;

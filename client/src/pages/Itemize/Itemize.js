@@ -6,7 +6,7 @@ import API from "../../utils/API";
 import { ModalType, ManualModal, ScannerModal, ChooseModal } from '../../components/Modal';
 import ReactTable from 'react-table';
 import ItemList from '../../components/ItemList'
-import {ItemPanel, SummaryPanel} from '../../components/Panel'
+import {ItemPanel, SummaryPanel, EditPanel} from '../../components/Panel'
 import icon from "./icon-small.png"
 //import "../../node_modules/react-table/react-table.css";
 
@@ -510,6 +510,8 @@ class Itemize extends Component {
 		item.ean = "";
 		item.upca = "";
 		item.category = "";
+		item.location = "";
+		item.quantity = "";
 		item.desc = "";
 		item.price_new = "";
 		item.image = "";
@@ -583,52 +585,22 @@ class Itemize extends Component {
 							<div className = "row">
 								<div className='col'>
 									{this.state && this.state.editBeforeDatabase ? (
-										<form onSubmit={this.handleSubmit}>
-											<div className="form-group">
-												<label htmlFor="productName">Product:</label>
-												<input name="productName" className="form-control" type="text" value={this.state.item.productName} onChange={this.handleManualModalChange}/>
-
-												<label htmlFor="ean">EAN/Bar Code Number:</label>
-												<input name="ean" className="form-control" type="text" value={this.state.item.ean} onChange={this.handleManualModalChange}/>
-
-												<label htmlFor="location">Location:</label>
-												<input name="location" className="form-control" type="text" value={this.state.item.location} onChange={this.handleManualModalChange}/>
-
-												<label htmlFor="companyName">Company:</label>
-												<input name="companyName" className="form-control" type="text" value={this.state.item.companyName} onChange={this.handleManualModalChange}/>
-
-												<label htmlFor="category">Category:</label>
-												<input name="category" className="form-control" type="text" value={this.state.item.category} onChange={this.handleManualModalChange}/>
-
-												<label htmlFor="quantity">Quantity:</label>
-												<input name="quantity" className="form-control" type="text" value={this.state.item.quantity} onChange={this.handleManualModalChange}/>
-
-												<label htmlFor="price_new">Price:</label>
-												<input name="price_new" className="form-control" type="text" value={this.state.item.price_new} onChange={this.handleManualModalChange}/>
-
-												<label htmlFor="desc">Description:</label>
-												<input name="desc" className="form-control" type="text" value={this.state.item.desc} onChange={this.handleManualModalChange}/>
-											</div>
-											<button type="submit" className="btn btn-primary">Submit</button>
-										</form>
+										<EditPanel 
+											item ={this.state.item}
+											onSubmit = {this.handleSubmit}
+											onChange={this.handleManualModalChange}
+										/>
 									) : (
 										<div/>
 
 									)}
 								</div>
 							</div>
-				
-
-					
 						<ItemPanel 
 							items={this.state.savedItems}
-
 							choose={this.choosePicked}
 							deleteItem={this.deleteItem}
-						/>
-
-						
-					
+						/>			
 					{this.renderModal()}
 				</div>
 		);

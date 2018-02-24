@@ -29,7 +29,7 @@ export function ChooseModal ({ onAfterOpen, onClose, onSubmit, scanner, manual})
 		contentLabel="Choose Modal">
 			<div className="modal-header" style={{padding: "35px 50px"}}>
 				<h4><span className="glyphicon glyphicon-camera"></span>Item Entry</h4>
-				<button type="button" className="close" onClick={onClose} data-dismiss="modal"><i class="fas fa-times"></i></button>
+				<button type="button" className="close" onClick={onClose} data-dismiss="modal"><i className="fas fa-times"></i></button>
 			</div>
 			<div className="modal-body text-center" style={{padding:"40px 50px"}}>
 				<div className = "row">
@@ -55,7 +55,7 @@ export function ScannerModal({ onAfterOpen, onClose, onSubmit, onChange, code}){
 		contentLabel="Scanner Modal">
 			<div className="modal-header" style={{padding: "35px 50px"}}>
 				<h4><span className="glyphicon glyphicon-camera"></span>Item Entry</h4>
-				<button type="button" className="close" onClick={onClose} data-dismiss="modal"><i class="fas fa-times"></i></button>
+				<button type="button" className="close" onClick={onClose} data-dismiss="modal"><i className="fas fa-times"></i></button>
 			</div>
 			<div className="modal-body" style={{padding:"40px 50px"}}>
 				<label id = "camera-selection">
@@ -90,7 +90,7 @@ export function ManualModal({ onAfterOpen, onClose, onSubmit, onChange, productN
 		contentLabel="Manual Modal">
 			<div className="modal-header" style={{padding: "35px 50px"}}>
 				<h4><span className="glyphicon glyphicon-camera"></span>Manual Entry</h4>
-				<button type="button" className="close" onClick={onClose} data-dismiss="modal"><i class="fas fa-times"></i></button>
+				<button type="button" className="close" onClick={onClose} data-dismiss="modal"><i className ="fas fa-times"></i></button>
 			</div>
 			<div className="modal-body" style={{padding:"20px 30px"}}>
 				<form onSubmit={onSubmit}>

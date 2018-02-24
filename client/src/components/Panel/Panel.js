@@ -41,6 +41,46 @@ export function SummaryPanel ({total_items, total_worth}){
 	)
 }
 
+export function EditPanel ({item, onSubmit, onChange}){
+	return (
+		<div className="card">
+			<div className="card-header">
+				Edit Item
+			</div>
+			<div className="card-body">
+				<form onSubmit={onSubmit}>
+					<div className="form-group">
+						<label htmlFor="productName">Product:</label>
+						<input name="productName" className="form-control" type="text" value={item.productName} onChange={onChange}/>
+
+						<label htmlFor="ean">EAN/Bar Code Number:</label>
+						<input name="ean" className="form-control" type="text" value={item.ean} onChange={onChange}/>
+
+						<label htmlFor="location">Location:</label>
+						<input name="location" className="form-control" type="text" value={item.location} onChange={onChange}/>
+
+						<label htmlFor="companyName">Company:</label>
+						<input name="companyName" className="form-control" type="text" value={item.companyName} onChange={onChange}/>
+
+						<label htmlFor="category">Category:</label>
+						<input name="category" className="form-control" type="text" value={item.category} onChange={onChange}/>
+
+						<label htmlFor="quantity">Quantity:</label>
+						<input name="quantity" className="form-control" type="text" value={item.quantity} onChange={onChange}/>
+
+						<label htmlFor="price_new">Price:</label>
+						<input name="price_new" className="form-control" type="text" value={item.price_new} onChange={onChange}/>
+
+						<label htmlFor="desc">Description:</label>
+						<input name="desc" className="form-control" type="text" value={item.desc} onChange={onChange}/>
+					</div>
+					<button type="submit" className="btn btn-primary blue-btn float-right">Submit</button>
+				</form>
+			</div>
+		</div>
+	)
+}
+
 export function ItemPanel ({items, choose, deleteItem}){
 	return (
 		<div className="card" id ='items'>
