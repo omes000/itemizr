@@ -59,3 +59,13 @@ body {
 	background-color: rgb(145, 183, 150);
 	border: none;
 }
+
+#headerOne {
+    background-color: rgb(194, 224, 231);
+    color: black;
+    border: solid;
+    border-width: 1px;
+    /* border-color: rgb(238, 199, 172); */
+    border-color:  rgb(194, 224, 231);
+    text-align: center;
+}

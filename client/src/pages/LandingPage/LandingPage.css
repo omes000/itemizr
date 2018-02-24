@@ -29,7 +29,7 @@ html {
 }
 
 .InfoBox {
-	margin: 10px 0px 20px 20px;
+	margin: 10px 0px 0px 0px;
 
 }
 
@@ -38,7 +38,7 @@ html {
 }
 
 .TopContentBox {
-	width: 38%;
+	width: 60%;
 	left: 40px;
 	top: 20px;
 	float: left;
@@ -407,7 +407,6 @@ a:link, a:visited {
 	}
 
 	.InfoBox {
-		width: 90%;
 		float: left;
 		margin: 0px 0px, 0px 0px;
 	}
@@ -480,6 +479,10 @@ a:link, a:visited {
 	.UserButtons {
 		text-align: center;
 	}
+	.Description {
+        font-size: 26px;
+        color: rgb(155, 170, 182);
+    }
 
 }
 
