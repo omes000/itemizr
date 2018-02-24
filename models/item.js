@@ -8,8 +8,9 @@ const ItemSchema = new Schema({
 	upca: { type: String },
 	category:{type: String},
 	desc:{type: String},
-	price_new:{type: String},
-	image:{type: String, default: "http://placehold.it/100x100"},
+	price_new:{type: Number},
+	quantity: {type: Number, default: 1},
+	image:{type: String},
 	location:{type: String},
 	serialNumber:{type: String, default: "N/A"}, 
 	date: { type: Date, default: Date.now }
